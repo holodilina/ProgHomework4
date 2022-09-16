@@ -6,7 +6,7 @@ void FillArray(int[] collection)
     int index = 0;
     while (index < length)
     {
-        collection[index] = new Random().Next(1, 8);
+        collection[index] = new Random().Next(1, 10);
         index++;
     }
 }
@@ -27,12 +27,12 @@ int IndexOf(int[] collection, int find)
     int count = collection.Length;
     int index = 0;
     
+     int position = -1;
     while (index < count)
     {
         if(collection[index] == find)
         {
            position = index;
-
            break;
         }
         index++;
@@ -44,14 +44,13 @@ int[] array = new int[8];
 
 FillArray(array);
 
-array[1] = 1;
-array[2] = 2;
-array[3] = 5;
-array[4] = 7;
-array[5] =19;
-array[6] = 6;
-array[7] = 1;
-array[8] = 33;
-
+array[0] = 1;
+array[1] = 2;
+array[2] = 5;
+array[3] = 7;
+array[4] =19;
+array[5] = 6;
+array[6] = 1;
+array[7] = 33;
 
 PrintArray(array);
