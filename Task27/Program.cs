@@ -1,6 +1,5 @@
 ﻿// Программа, которая принимает на вход число и выдаёт сумму цифр в числе.
 Console.WriteLine("Введите число: ");
-
    int summ = 0;
    int [i];
    int size = int.Parse(Console.ReadLine());
