@@ -1,22 +1,19 @@
 ﻿// Программа, которая принимает на вход число и выдаёт сумму цифр в числе.
 Console.WriteLine("Введите число: ");
+
+int num = Convert.ToInt32(Console.ReadLine());
+int n = (int)Math.Log10(num) + 1;
+Console.WriteLine("Количество чисел в числе: " + n);
+
    int summ = 0;
-   int [i];
-   int size = int.Parse(Console.ReadLine());
-   int[] mass = new int[size];
-
-   Console.WriteLine("Задайте число массива: ");
-   string s = Console.ReadLine();
-
-   for (int i = 0; i < s.Length; i++);
+   while ( num !=0)
    {
-    mass[i] = int.Parse(s[i].ToString());
-   }
-   for (int i = 0; i < mass.Length; i++);
-   {
-    summ = mass[i] + summ;
+    summ += num % 10;
+    num /= 10;
    }
 
-Console.WriteLine(summ);
-ConsoleReadLine();
+   
+Console.WriteLine("Сумма чисел: " +summ);
+
+
 
