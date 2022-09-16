@@ -1,5 +1,5 @@
 ﻿// Программа, которая принимает на вход число и выдаёт сумму цифр в числе.
-Console.WriteLine("Введите число: ");
+Console.Write("Введите число: ");
 
 int num = Convert.ToInt32(Console.ReadLine());
 int n = (int)Math.Log10(num) + 1;
