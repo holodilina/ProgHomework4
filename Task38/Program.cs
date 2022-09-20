@@ -15,27 +15,43 @@ if (string.IsNullOrWhiteSpace(sizeArrayStr)||
     return;
 } 
 
-var summ=0;
-var array = CreateRandomArray(sizeArray);
+var res=CalRes(CreateRandomArray(sizeArray)); 
+//var res = CalRes( new double[] {3, 7, 22, 2, 78});
 
-for(var i=0; i<sizeArray;i++)
+Console.WriteLine($"Результат: {res}"); 
+
+static double [] CreateRandomArray(int size)
 {
-        if(i%2!=0)
-            summ+=array[i];
-}
-
-Console.WriteLine($"Сумма: {summ}"); 
-
-static int [] CreateRandomArray(int size)
-{
-    var array = new int[size];
+    var array = new double[size];
     var rn = new Random();
     for(var i=0; i < size; i++)
     {
-        array[i]=rn.Next(-10, 11);
+        array[i]=rn.NextDouble();
         Console.Write($"{array[i]}, ");
     }
     Console.WriteLine();
     return array;
+}
+
+// Найдите разницу между максимальным и минимальным элементами массива.
+static double CalRes(double[] array)
+{ 
+    double min=array[0];
+    double max=array[0];
+
+    for(var i=1;i<array.Length;i++)
+    {
+        if(array[i]<min)
+        {
+            min = array[i];
+        }
+
+        if(array[i]>max)
+        {
+            max=array[i];
+        }
+    }
+
+    return max - min;
 }
 
